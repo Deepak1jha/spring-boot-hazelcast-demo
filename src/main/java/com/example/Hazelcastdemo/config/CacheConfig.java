@@ -12,9 +12,10 @@ public class CacheConfig {
 
     @Bean
     public Config configure() {
-        return new Config().setInstanceName("hazelcast-instance")
+        return new Config().setInstanceName("user-hazelcast-instance")
                 .addMapConfig(new MapConfig().setName("UserCache")
                 .setMaxSizeConfig(new MaxSizeConfig(200, MaxSizeConfig.MaxSizePolicy.FREE_HEAP_SIZE))
                 .setEvictionPolicy(EvictionPolicy.LRU).setTimeToLiveSeconds(2000));
     }
+
 }
