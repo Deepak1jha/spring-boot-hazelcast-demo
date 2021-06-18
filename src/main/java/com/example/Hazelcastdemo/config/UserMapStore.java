@@ -42,7 +42,6 @@ public class UserMapStore implements MapStore<Integer, User> {
 
     @Override
     public User load(Integer key) {
-//        userRepository.findUserById(key);
         hzStock.get(key);
         return null;
     }
@@ -54,15 +53,7 @@ public class UserMapStore implements MapStore<Integer, User> {
 
     @Override
     public Set<Integer> loadAllKeys() {
-//        hzStock.localKeySet();
-        log.info(String.valueOf(hzStock.size()));
-        log.info(String.valueOf(hzStock.get(1)));
-//        log.info(;
-//        hzStock.localKeySet(id->);
-
         hzStock.localKeySet().forEach(System.out::println);
-        log.info("999999999999999999999999999999999999999999999");
-
         return null;
     }
 }
