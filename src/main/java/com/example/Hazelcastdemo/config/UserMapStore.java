@@ -38,8 +38,6 @@ public class UserMapStore implements MapStore<Integer, User> {
 
     @Override
     public void deleteAll(Collection<Integer> keys) {
-        log.info("999999999999999999999999999999999999999999999");
-
     }
 
     @Override
